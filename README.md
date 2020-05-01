@@ -33,3 +33,12 @@ If you are working on an existing view and don't want to change anything in eith
   <li></li>
 </ol>
 -->
+<hr />
+<h1>Self notes cause I'm a fucking rtard</h1>
+<ul>
+  <li>Make sure that in the Controller of said class model that the 'Bind[()]' section is a one-liner. DO NOT separate them into individual lines. Doing so will cause .NET to not detect the values on Create().</li>
+  <li>Make sure to correctly include the linking database in the Independent table (i.e. .Include(d => d.[TABLE]).</li>
+  <li>Ensure the 'ViewData' or 'ViewBag' temp data grabber method is done correctly. Incorrectly doing so will either throw a Null Object Reference error as you are attempting to grab a literally null object (one that is non-existent).</li>
+  <li>Ensure that in the Models, the 'ForeignKey' data annotation is set correctly and references the correct column name (case sensitive).</li>
+  <li>If getting an 'INSERT Statement...' error, it's very very likely that existing data is causing problems with the table. Either find a way to update/alter the existing table and add the 'null operational' tag (?) to the foreign key columns. Otherwise, last resort, you will need to delete all existing data relevant to the independent table.</li>
+</ul>
